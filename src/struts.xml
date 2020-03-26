@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	<package name="default" extends="struts-default">
+		<action name="user_login" method="login" class="com.action.UserAction">
+			<result name="success">/app/project_hall.jsp</result>
+			<result name="failure">/app/login_failure.jsp</result>
+		</action>
+		
+		<action name="user_register" method="register" class="com.action.UserAction">
+			<result name="success">/app/register_success.jsp</result>
+			<result name="failure">/app/register_failure.jsp</result>
+		</action>
+		
+		<action name="user_update" method="update" class="com.action.UserAction">
+			<result name="success">/app/person_center.jsp</result>
+			<result name="failure">/app/project_hall.jsp</result>
+		</action>
+		
+		<action name="user_logout" method="logout" class="com.action.UserAction">
+			<result name="success" type="redirect">/app/project_hall.jsp</result>
+		</action>
+
+		<action name="user_question" method="getQuestion" class="com.action.UserAction">
+			<result name="success">/app/fp_answer.jsp</result>
+			<result name="failure">/app/fp_failure.jsp</result>
+		</action>
+		
+		<action name="user_anwser" method="checkAnswer" class="com.action.UserAction">
+			<result name="success">/app/fp_reset.jsp</result>
+			<result name="failure">/app/fp_failure.jsp</result>
+		</action>
+		
+		<action name="user_set_status" method="setStatus" class="com.action.UserAction">
+			<result name="success">/admin/system_manage.jsp</result>
+			<result name="failure">/admin/system_manage.jsp</result>
+		</action>
+		
+		<action name="password_reset" method="passwordReset" class="com.action.UserAction">
+			<result name="success">/app/fp_success.jsp</result>
+			<result name="failure">/app/fp_failure.jsp</result>
+		</action>
+		
+		
+		<action name="project_search" method="search" class="com.action.ProjectAction">
+			<result name="success">/app/</result>
+		</action>
+		
+		<action name="project_publish" method="publish" class="com.action.ProjectAction">
+			<result name="success">/app/persion_center.jsp</result>
+		</action>
+		
+		<action name="project_collect" method="collect" class="com.action.ProjectAction">
+			<result name="success">/app/project_hall.jsp</result>
+			<result name="failure">/app/project_hall.jsp</result>
+		</action>
+		
+		<action name="project_approve" method="approve" class="com.action.ProjectAction">
+			<result name="success">/admin/project_manage.jsp</result>
+		</action>
+		
+		<action name="developer_auth_submit" method="auth" class="com.action.DeveloperAction">
+			<result name="success">/app/person_center.jsp</result>
+			<result name="failure">/app/person_center.jsp</result>
+		</action>
+		
+		<action name="developer_set_status" method="setStatus" class="com.action.DeveloperAction">
+			<result name="success">/admin/system_manage.jsp</result>
+			<result name="failure">/admin/system_manage.jsp</result>
+		</action>
+		
+		<action name="collection_collect" method="collect" class="com.action.CollectionAction">
+			<result name="success">/app/person_center.jsp</result>
+			<result name="developer">/app/developer_hall.jsp</result>
+			<result name="project">/app/project_hall.jsp</result>
+		</action>
+		
+		<action name="collection_delete" method="delete" class="com.action.CollectionAction">
+			<result name="success">/app/person_center.jsp</result>
+			<result name="failure">/app/person_center.jsp</result>
+		</action>
+		
+		<action name="news_send" method="send" class="com.action.NewsAction">
+			<result name="success">/app/person_center.jsp</result>
+		</action>
+		
+		<action name="news_set_status" method="setStatus" class="com.action.NewsAction">
+			<result name="success">/app/person_center.jsp</result>
+			<result name="failure">/app/person_center.jsp</result>
+		</action>
+	
+		<action name="admin_add" method="add" class="com.action.AdminAction">
+			<result name="success">/admin/login.jsp</result>
+		</action>
+		
+		<action name="admin_login" method="login" class="com.action.AdminAction">
+			<result name="SystemManage">/admin/system_manage.jsp</result>
+			<result name="ProjectManage">/admin/project_manage.jsp</result>
+			<result name="UserManage">/admin/user_manage.jsp</result>
+			<result name="CustomerServiceStaff">/admin/customer_service_staff.jsp</result>
+			<result name="failure">/admin/failure.jsp</result>
+		</action>
+		
+		<action name="admin_logout" method="logout" class="com.action.AdminAction">
+			<result name="logout">/admin/login.jsp</result>
+		</action>
+		
+		<action name="admin_delete" method="delete" class="com.action.AdminAction">
+			<result name="success">/admin/system_manage.jsp</result>
+		</action>
+		
+	</package>
+</struts>

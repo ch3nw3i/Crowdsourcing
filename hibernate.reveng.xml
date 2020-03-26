@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="developer" catalog="crowdsourcing" class="Developer">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="message" catalog="crowdsourcing" class="Message">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+		<column name="from_user_id" property="from_user_id"></column>
+		<column name="to_user_id" property="to_user_id"></column>
+		<column name="gmt_create" property="gmt_create"></column>
+		<column name="gmt_modified" property="gmt_modified"></column>
+	</table>
+	<table name="project" catalog="crowdsourcing" class="Project">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+		<column name="gmt_create" property="gmt_create"></column>
+		<column name="gmt_modified" property="gmt_modified"></column>
+		<column name="requirement_doc" property="requirement_doc"></column>
+		<column name="developer_id" property="developer_id"></column>
+	</table>
+	<table name="apptype" catalog="crowdsourcing" class="AppType"></table>
+	<table name="city" catalog="crowdsourcing" class="City"></table>
+	<table name="skill" catalog="crowdsourcing" class="Skill"></table>
+</hibernate-reverse-engineering>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Crowdsourcing"
+  id="myeclipse.1508845554936"
+  context-root="/Crowdsourcing"
+  j2ee-spec="5.0"
+  archive="Crowdsourcing.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
