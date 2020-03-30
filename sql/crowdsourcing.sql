@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : conn
+Source Server         : test
 Source Server Version : 50713
 Source Host           : localhost:3306
 Source Database       : crowdsourcing
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50713
 File Encoding         : 65001
 
-Date: 2018-12-13 21:50:18
+Date: 2020-03-30 15:51:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,13 +20,13 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `administrator`;
 CREATE TABLE `administrator` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `administrator` varchar(20) COLLATE utf8_unicode_ci DEFAULT '',
-  `password` varchar(20) COLLATE utf8_unicode_ci DEFAULT '',
-  `name` varchar(20) COLLATE utf8_unicode_ci DEFAULT '',
-  `role` tinyint(20) DEFAULT '0' COMMENT '1 系统管理员\r\n2 项目管理员\r\n3 用户管理员\r\n4 客户服务',
-  `telephone` varchar(20) COLLATE utf8_unicode_ci DEFAULT '',
-  `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT '',
-  `duty` varchar(100) COLLATE utf8_unicode_ci DEFAULT '',
+  `administrator` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `role` tinyint(20) DEFAULT NULL COMMENT '1 系统管理员\r\n2 项目管理员\r\n3 用户管理员\r\n4 客户服务',
+  `telephone` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `duty` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `gmtCreate` datetime DEFAULT NULL,
   `gmtModified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -222,7 +222,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '123', '123', '用户123', null, '启用', '普通用户&需求方', '123', '456', null, null);
+INSERT INTO `user` VALUES ('1', '123', '123', '用户123', null, '禁用', '普通用户&需求方', '123', '456', null, null);
 INSERT INTO `user` VALUES ('2', 'requestor', '123', '用户-需求方', null, '启用', '普通用户&需求方', null, null, null, null);
 INSERT INTO `user` VALUES ('3', 'developer', '123', '用户-开发者', null, '启用', '普通用户&开发者', null, null, null, null);
 INSERT INTO `user` VALUES ('5', 'user', '123', 'test', null, '启用', '普通用户', null, null, null, null);
