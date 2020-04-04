@@ -45,7 +45,7 @@
 - WebRoot/WEB-INF/web.xml：web项目配置文件，配置拦截器和使用的控制层框架
 - WebRoot/admin.jsp：后台入口JSP
 - WebRoot/index.jsp：前台入口JSP
-- hibernate.reveng.xml：配置hibernate逆向引擎根据数据库表生成实体类
+- hibernate.reveng.xml：配置hibernate反转引擎根据数据库表生成实体类
 
 
 
